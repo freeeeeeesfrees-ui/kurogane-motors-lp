@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黒鉄モーターズ | KUROGANE ZERO-1 — 鉄が、目を覚ます。</title>
+  <meta name="description" content="バイク専門店 黒鉄モーターズ(架空デモサイト)。新型 KUROGANE ZERO-1、試乗予約受付中。スクロールで1台が組み上がる3Dプロダクトページ。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23e01b34'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2308080a'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ LOADER ============ -->
+  <div id="loader">
+    <div class="loader-logo en">KUROGANE<span>MOTORS TOKYO</span></div>
+    <div class="loader-bar"><i></i></div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <a class="logo en" href="#top">KUROGANE<span>MOTORS</span></a>
+    <nav class="gnav">
+      <a href="#stage">Story</a>
+      <a href="#service">Service</a>
+      <a href="#lineup">Lineup</a>
+      <a href="#voice">Voice</a>
+      <a href="#access">Access</a>
+    </nav>
+    <a class="btn btn-accent header-cta" href="#contact">試乗予約</a>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ 3D SCROLL STAGE ============ -->
+    <section id="stage">
+      <div class="stage-sticky">
+        <canvas id="webgl"></canvas>
+        <div class="stage-vignette"></div>
+
+        <!-- HERO -->
+        <div class="hero-inner">
+          <p class="hero-kicker en">KUROGANE MOTORS TOKYO &mdash; NEW MODEL</p>
+          <h1 class="hero-title en">ZERO-1</h1>
+          <p class="hero-sub">鉄が、目を覚ます。<br>スクロールして、1台が生まれる瞬間を目撃せよ。</p>
+          <div class="scroll-cue"><span></span><em class="en">SCROLL</em></div>
+        </div>
+
+        <!-- STORY CAPTIONS -->
+        <div class="cap cap-left" id="cap1">
+          <p class="cap-step en">STEP 01 / FRAME</p>
+          <h2>すべては、<br>一本の骨格から。</h2>
+          <p class="cap-body">職人が一本ずつ手で溶接するクロモリ鋼トレリスフレーム。乾燥重量168kgの軽さと、路面を読み取るしなやかさは、ここから生まれる。</p>
+        </div>
+
+        <div class="cap cap-right" id="cap2">
+          <p class="cap-step en">STEP 02 / ENGINE</p>
+          <h2>心臓部、<br>998cc。</h2>
+          <p class="cap-body">水冷4ストローク並列ツイン「KRG-998」。最高出力152PS。街では従順に、峠では獰猛に。右手ひとつで、性格が変わる。</p>
+        </div>
+
+        <div class="cap cap-left" id="cap3">
+          <p class="cap-step en">STEP 03 / WHEELS &amp; SUSPENSION</p>
+          <h2>路面を、<br>掴め。</h2>
+          <p class="cap-body">倒立フロントフォークとアルミスイングアーム。17インチ鍛造ホイールが、ミリ単位のライン取りに応える。</p>
+        </div>
+
+        <div class="cap cap-right" id="cap4">
+          <p class="cap-step en">STEP 04 / BODYWORK</p>
+          <h2>漆黒を、<br>纏う。</h2>
+          <p class="cap-body">12層の手塗り塗装が生む、深い漆黒のタンク。跨った瞬間、視界に入るのは道だけだ。</p>
+        </div>
+
+        <div class="cap cap-center" id="cap5">
+          <p class="cap-step en">COMPLETE</p>
+          <h2 class="en cap-model">KUROGANE ZERO-1</h2>
+          <div class="spec-chips">
+            <div class="chip"><b class="en">998</b><span>cc</span></div>
+            <div class="chip"><b class="en">152</b><span>PS</span></div>
+            <div class="chip"><b class="en">168</b><span>kg</span></div>
+            <div class="chip"><b class="en">&yen;1,980,000</b><span>税込</span></div>
+          </div>
+        </div>
+
+        <div class="cap cap-center" id="cap6">
+          <h2 class="cap-ride">さあ、<br>走り出せ。</h2>
+        </div>
+
+        <!-- STAGE OUTRO / CTA -->
+        <div class="stage-outro">
+          <p class="outro-en en">READY TO RIDE?</p>
+          <p class="outro-jp">ZERO-1は、店頭で試乗できます。<br>次にこのマシンを走らせるのは、あなたです。</p>
+          <div class="outro-btns">
+            <a class="btn btn-accent" href="#contact">試乗を予約する</a>
+            <a class="btn btn-ghost" href="#lineup">ラインナップを見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICE ============ -->
+    <section id="service" class="section">
+      <div class="container">
+        <p class="sec-kicker en reveal">WHY KUROGANE</p>
+        <h2 class="sec-title reveal">売って終わり、にしない店。</h2>
+        <p class="sec-lead reveal">黒鉄モーターズは、販売・整備・カスタム・買取までワンストップ。<br>あなたのバイクライフの「基地」になります。</p>
+        <div class="cards3">
+          <article class="s-card reveal">
+            <p class="s-num en">01</p>
+            <h3>納車前 100項目整備</h3>
+            <p>国家整備資格を持つメカニックが、納車前に100項目の点検・整備を実施。中古車も新車と同じ基準で仕上げます。</p>
+          </article>
+          <article class="s-card reveal" data-delay="0.1">
+            <p class="s-num en">02</p>
+            <h3>ワンオフカスタム</h3>
+            <p>マフラー1本の交換からフルカスタムまで。専属ビルダーがあなただけの1台を設計・製作します。</p>
+          </article>
+          <article class="s-card reveal" data-delay="0.2">
+            <p class="s-num en">03</p>
+            <h3>高価買取・下取り</h3>
+            <p>乗り換えもおまかせ。他店の査定額をご提示いただければ、そこからの上乗せに挑戦します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LINEUP ============ -->
+    <section id="lineup" class="section section-alt">
+      <div class="container">
+        <p class="sec-kicker en reveal">LINEUP</p>
+        <h2 class="sec-title reveal">ZEROシリーズ、全3機種。</h2>
+        <p class="sec-lead reveal">同じ骨格から生まれた、性格の違う3台。すべて店頭で試乗できます。</p>
+        <div class="cards3 bike-cards">
+          <article class="bike-card reveal">
+            <div class="bike-thumb"><img id="thumb-zero1" alt="KUROGANE ZERO-1 クリムゾンレッド"></div>
+            <div class="bike-info">
+              <h3 class="en">ZERO-1 <span class="tag">FLAGSHIP</span></h3>
+              <p class="bike-spec en">998cc / 152PS / 168kg</p>
+              <p class="bike-desc">シリーズの頂点。サーキットから週末のワインディングまで。</p>
+              <p class="bike-price en">&yen;1,980,000<span>(税込・諸費用別)</span></p>
+              <a href="#contact" class="btn btn-ghost btn-s">この車両で試乗予約</a>
+            </div>
+          </article>
+          <article class="bike-card reveal" data-delay="0.1">
+            <div class="bike-thumb"><img id="thumb-zeros" alt="KUROGANE ZERO-S チタニウムシルバー"></div>
+            <div class="bike-info">
+              <h3 class="en">ZERO-S <span class="tag">STREET</span></h3>
+              <p class="bike-spec en">748cc / 92PS / 176kg</p>
+              <p class="bike-desc">毎日乗れるスポーツ。通勤からツーリングまで1台で。</p>
+              <p class="bike-price en">&yen;1,480,000<span>(税込・諸費用別)</span></p>
+              <a href="#contact" class="btn btn-ghost btn-s">この車両で試乗予約</a>
+            </div>
+          </article>
+          <article class="bike-card reveal" data-delay="0.2">
+            <div class="bike-thumb"><img id="thumb-zerocafe" alt="KUROGANE ZERO-CAFE ブリティッシュグリーン"></div>
+            <div class="bike-info">
+              <h3 class="en">ZERO-CAFE <span class="tag">CLASSIC</span></h3>
+              <p class="bike-spec en">649cc / 72PS / 182kg</p>
+              <p class="bike-desc">クラシックの佇まいに現代の心臓を。カフェで語れる一台。</p>
+              <p class="bike-price en">&yen;1,180,000<span>(税込・諸費用別)</span></p>
+              <a href="#contact" class="btn btn-ghost btn-s">この車両で試乗予約</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VOICE ============ -->
+    <section id="voice" class="section">
+      <div class="container">
+        <p class="sec-kicker en reveal">OWNER'S VOICE</p>
+        <h2 class="sec-title reveal">オーナーの声</h2>
+        <div class="cards3">
+          <blockquote class="v-card reveal">
+            <p class="v-stars en">★★★★★</p>
+            <p>「納車のとき、整備記録を1ページずつ説明してくれた。この店なら遠くても通う価値があります。」</p>
+            <footer>ZERO-1 オーナー / 東京都・38歳</footer>
+          </blockquote>
+          <blockquote class="v-card reveal" data-delay="0.1">
+            <p class="v-stars en">★★★★★</p>
+            <p>「初めての大型で不安だらけでしたが、足つきや保険まで相談に乗ってくれました。押し売りが一切ない。」</p>
+            <footer>ZERO-S オーナー / 神奈川県・29歳</footer>
+          </blockquote>
+          <blockquote class="v-card reveal" data-delay="0.2">
+            <p class="v-stars en">★★★★★</p>
+            <p>「カスタムの相談が楽しすぎて、気づけば毎週末お店にいます。コーヒーが美味いのもずるい。」</p>
+            <footer>ZERO-CAFE オーナー / 埼玉県・45歳</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACCESS ============ -->
+    <section id="access" class="section section-alt">
+      <div class="container">
+        <p class="sec-kicker en reveal">ACCESS</p>
+        <h2 class="sec-title reveal">店舗情報</h2>
+        <div class="access-grid">
+          <div class="access-map reveal">
+            <div class="map-pin"></div>
+            <p class="map-label en">KUROGANE MOTORS TOKYO</p>
+          </div>
+          <dl class="access-info reveal" data-delay="0.1">
+            <div><dt>店名</dt><dd>黒鉄モーターズ 東京本店</dd></div>
+            <div><dt>住所</dt><dd>〒154-0000 東京都世田谷区玉川3-XX-X<br><span class="small">東急田園都市線「二子玉川駅」徒歩8分 / 駐車場・駐輪場あり</span></dd></div>
+            <div><dt>営業時間</dt><dd>11:00 - 19:00(水曜定休)</dd></div>
+            <div><dt>電話</dt><dd class="en tel">03-6XXX-XXXX</dd></div>
+            <div><dt>取扱</dt><dd>新車・中古車販売 / 車検・整備 / カスタム / 買取</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container container-s">
+        <p class="sec-kicker en reveal">TEST RIDE</p>
+        <h2 class="sec-title reveal">試乗予約・お問い合わせ</h2>
+        <p class="sec-lead reveal">ご希望日の2日前までにご予約ください。免許証をお持ちのうえご来店いただければ、当日その場でZEROシリーズに試乗できます。</p>
+        <form id="contactForm" class="form reveal" novalidate>
+          <div class="form-row2">
+            <label>お名前 <i>必須</i>
+              <input type="text" name="name" placeholder="黒鉄 太郎" required>
+            </label>
+            <label>電話番号
+              <input type="tel" name="tel" placeholder="090-1234-5678">
+            </label>
+          </div>
+          <div class="form-row2">
+            <label>メールアドレス <i>必須</i>
+              <input type="email" name="email" placeholder="you@example.com" required>
+            </label>
+            <label>ご希望日
+              <input type="date" name="date">
+            </label>
+          </div>
+          <div class="form-row2">
+            <label>ご希望メニュー
+              <select name="menu">
+                <option>試乗予約(ZERO-1)</option>
+                <option>試乗予約(ZERO-S)</option>
+                <option>試乗予約(ZERO-CAFE)</option>
+                <option>お見積り依頼</option>
+                <option>カスタム相談</option>
+                <option>買取査定</option>
+              </select>
+            </label>
+            <span></span>
+          </div>
+          <label>メッセージ
+            <textarea name="message" rows="4" placeholder="ご質問・ご要望などお気軽にどうぞ"></textarea>
+          </label>
+          <button type="submit" class="btn btn-accent btn-l">この内容で予約リクエストを送る</button>
+          <p class="form-note">※本サイトはデモンストレーションのため、実際には送信されません。</p>
+          <div class="form-done" hidden>
+            <p class="en done-en">THANK YOU!</p>
+            <p>予約リクエストを受け付けました(デモ)。<br>実際の店舗では、担当者より1営業日以内にご連絡いたします。</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <p class="logo en">KUROGANE<span>MOTORS</span></p>
+      <nav class="f-nav">
+        <a href="#stage">Story</a>
+        <a href="#service">Service</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#voice">Voice</a>
+        <a href="#access">Access</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="f-note">※本サイトは架空のショップによるデモンストレーションサイトです。掲載されている商品・価格・店舗情報はすべてフィクションです。</p>
+      <p class="copy en">&copy; 2026 KUROGANE MOTORS TOKYO (DEMO SITE)</p>
+    </div>
+  </footer>
+
+  <a class="float-cta" id="floatCta" href="#contact"><span class="en">TEST RIDE</span>試乗予約はこちら</a>
+
+  <!-- ============ LIBS ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
