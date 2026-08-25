@@ -10,15 +10,32 @@
   const gsap = window.gsap;
   gsap.registerPlugin(window.ScrollTrigger);
 
-  /* ---------- frame sequence ---------- */
+  /* ---------- frame sequence (landscape & portrait films) ---------- */
+  const isPortrait = window.matchMedia('(orientation: portrait)').matches;
   const FRAME_COUNT = 200;
   const FPS = 10;
-  const frameSrc = (i) =>
-    (window.FRAME_DATA && window.FRAME_DATA[i]) ||
-    `frames/f_${String(i + 1).padStart(3, '0')}.webp`;
+  const frameSrc = isPortrait
+    ? (i) => (window.FRAME_DATA_M && window.FRAME_DATA_M[i]) ||
+             `frames-m/m_${String(i + 1).padStart(3, '0')}.webp`
+    : (i) => (window.FRAME_DATA && window.FRAME_DATA[i]) ||
+             `frames/f_${String(i + 1).padStart(3, '0')}.webp`;
+
+  // the two films are edited differently, so the frame set is fixed per
+  // orientation at load; a real orientation flip reloads to swap films
+  window.matchMedia('(orientation: portrait)').addEventListener('change', (e) => {
+    if (e.matches !== isPortrait) location.reload();
+  });
 
   /* film chapters: [timelineStart, timelineEnd, videoStart(s), videoEnd(s)] */
-  const SEGMENTS = [
+  const SEGMENTS = isPortrait ? [
+    [0, 13, 0.0, 2.2],     // bolts & fasteners float in macro
+    [13, 25, 2.2, 4.3],    // front-end assembly close-ups
+    [25, 38, 4.3, 6.4],    // engine + rear wheel close-ups
+    [38, 52, 6.4, 8.1],    // matte-black front, lights out
+    [52, 64, 8.1, 9.6],    // ignition — the LED slash wakes
+    [64, 80, 9.6, 15.2],   // neon city night run
+    [80, 100, 15.2, 19.9]  // dealership showroom finale
+  ] : [
     [0, 13, 0.0, 1.2],     // engine floats alone
     [13, 25, 1.2, 2.6],    // frame embraces it
     [25, 38, 2.6, 4.3],    // chassis + wheels attach
